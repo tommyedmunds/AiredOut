@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+
+  "name": "Aired Out",
+  "description": "Displays Air Quality and informs the user of a website's environmental impact.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs",
+    "geolocation"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "fog.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
